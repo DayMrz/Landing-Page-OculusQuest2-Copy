@@ -1,10 +1,11 @@
+@import url("./reset.css");
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@900&family=Barlow+Semi+Condensed:wght@300;600;700;900&display=swap');
 
 :root {
     --Background-Perano: hsl(215, 71%, 83%);
     --Secondary-Dodger-Blue: hsl(216, 93%, 62%);
     --Primary-Denim: hsl(214, 73%, 44%);
-    --Secondary-letter-Nevada: hsl(200, 4%, 45%);
+    --Secondary-letter-Nevada: hsl(180, 3%, 57%);
     --Background-Perano: hsl(231, 66%, 83%);
     --Secondary-Titan-White: hsl(240, 100%, 100%);
     --Secondary-Transparent-White: hsla(0, 0%, 100%, 0.281);
@@ -16,6 +17,11 @@
     --Gradient-h: 284;
     --Gradient-s: 36%;
     --Gradient-l: 70%;
+}
+
+*, *::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
 }
 
 html {
@@ -49,13 +55,14 @@ body {
 
 .fa-shopping-basket {
     color: var(--Background-Shark);
-    font-size: 1rem;
+    font-size: 1em;
 }
 
 .basket-icon {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-decoration: none;
 }
 
 .nav-list {
@@ -64,7 +71,7 @@ body {
     justify-content: space-evenly;
     list-style: none;
     margin: 0;
-    padding: 1rem 0;
+    padding: 1em 0;
 }
 
 .nav-list li:hover {
@@ -80,7 +87,7 @@ body {
 
 .container {
     margin: 0 auto;
-    padding: 2rem 0;
+    padding: 2em 0;
     width: 85%;
 }
 
@@ -120,7 +127,7 @@ body {
     font-size: .7em;
     font-weight: 700;
     margin: 1.5em;
-    padding: 1rem 4.5rem;
+    padding: 1em 4.5em;
     text-transform: uppercase;
 }
 
@@ -151,8 +158,8 @@ background-color: var(--Secondary-Dodger-Blue);
 }
 
 .box-style{
-    margin: 2em 0;
-    padding: 1rem 2.5rem;
+    margin: 1em 0;
+    padding: 1.5em;
 }
 
 .gradient-explore .learn-more {
@@ -165,6 +172,7 @@ background-color: var(--Secondary-Dodger-Blue);
 
 .break-line {
     color: var(--Secondary-letter-Nevada);
+    border-top: 1px solid;
     margin: 2em 0 2em 0;
     margin: 0 auto;
     width: 90%;
@@ -176,15 +184,21 @@ background-color: var(--Secondary-Dodger-Blue);
     width: 100%;
 }
 
+#experiences .title,
+#experiences .paragraph, 
+.info-box .title {
+    padding-bottom: .5em;
+}
+
 #discover {
     background: linear-gradient(to left, hsl(var(--Gradient-h), var(--Gradient-l), var(--Gradient-s), 48%), hsl(var(--Gradient-h), var(--Gradient-l), var(--Gradient-s), 60%));
     color: var(--Secondary-Titan-White);
-    font-size: 1.5rem;
 }
 
 .discover-title {
-    font-size: 3rem;
+    font-size: 2.5em;
     font-weight: 900;
+    padding-bottom: 1em;
 }
 
 .discover-btn {
@@ -192,8 +206,8 @@ background-color: var(--Secondary-Dodger-Blue);
     border: var(--Secondary-Transparent-White)2px solid;
     border-radius: 25px;
     cursor: pointer;
-    margin: 2.5em 0 2em 0;
-    padding: 1rem 1.5rem;
+    margin: 1em 0 1.5em 0;
+    padding: 1em 1.5em;
 }
 
 .discover-btn .fa-arrow-right {
@@ -244,7 +258,7 @@ background-color: var(--Secondary-Dodger-Blue);
     border: none;
     border-bottom: var(--Secondary-letter-Nevada) 2px solid;
     margin-bottom: 2em;
-    padding: .3rem;
+    padding-top: 1em;
 }
 
 #submit {
@@ -256,7 +270,7 @@ background-color: var(--Secondary-Dodger-Blue);
     font-family: 'Barlow Semi Condensed', sans-serif;
     font-weight: 600;
     margin-bottom: 2em;
-    padding: .5rem 1rem;
+    padding: .5em 1em;
     text-transform: uppercase;
 }
 
@@ -283,12 +297,12 @@ background-color: var(--Secondary-Dodger-Blue);
     }
 
     .nav-link {
-        font-size: 1rem;
+        font-size: .9em;
     }
 
     .box-style{
         margin: 1em 0;
-        padding: .5rem 1.2rem;
+        padding: 1em;
     }
 
     #main {
@@ -302,16 +316,7 @@ background-color: var(--Secondary-Dodger-Blue);
     }
 
     .nav-link {
-        font-size: 1.5rem;
         letter-spacing: .15em;
-    }
-
-    #header-img {
-        height: 8rem;
-    }
-
-    .fa-shopping-basket {
-        font-size: 2rem;
     }
 
     #main {
@@ -357,7 +362,7 @@ background-color: var(--Secondary-Dodger-Blue);
     .background-img-quest2 {
         width: 50%;
         margin: 0;
-        padding-top: 5rem;
+        padding-top: 5em;
     }
 
     .container-boxes {
