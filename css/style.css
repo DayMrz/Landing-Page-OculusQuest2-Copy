@@ -1,11 +1,10 @@
-@import url("./reset.css");
 @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@900&family=Barlow+Semi+Condensed:wght@300;600;700;900&display=swap');
 
 :root {
     --Background-Perano: hsl(215, 71%, 83%);
     --Secondary-Dodger-Blue: hsl(216, 93%, 62%);
     --Primary-Denim: hsl(214, 73%, 44%);
-    --Secondary-letter-Nevada: hsl(180, 3%, 57%);
+    --Secondary-letter-Nevada: hsl(200, 4%, 45%);
     --Background-Perano: hsl(231, 66%, 83%);
     --Secondary-Titan-White: hsl(240, 100%, 100%);
     --Secondary-Transparent-White: hsla(0, 0%, 100%, 0.281);
@@ -17,11 +16,6 @@
     --Gradient-h: 284;
     --Gradient-s: 36%;
     --Gradient-l: 70%;
-}
-
-*, *::before, ::after {
-    box-sizing: border-box;
-    margin: 0;
 }
 
 html {
@@ -49,20 +43,19 @@ body {
 
 .top-nav {
     display: flex;
-    justify-content: space-between;
-    margin: 0 1em ;
+    justify-content: flex-end;
+    margin: .5em 1em;
 }
 
 .fa-shopping-basket {
     color: var(--Background-Shark);
-    font-size: 1em;
+    font-size: 1.3rem;
 }
 
 .basket-icon {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-decoration: none;
 }
 
 .nav-list {
@@ -71,7 +64,7 @@ body {
     justify-content: space-evenly;
     list-style: none;
     margin: 0;
-    padding: 1em 0;
+    padding: 1rem 0;
 }
 
 .nav-list li:hover {
@@ -87,7 +80,7 @@ body {
 
 .container {
     margin: 0 auto;
-    padding: 2em 0;
+    padding: 2rem 0;
     width: 85%;
 }
 
@@ -127,7 +120,7 @@ body {
     font-size: .7em;
     font-weight: 700;
     margin: 1.5em;
-    padding: 1em 4.5em;
+    padding: 1rem 4.5rem;
     text-transform: uppercase;
 }
 
@@ -158,8 +151,8 @@ background-color: var(--Secondary-Dodger-Blue);
 }
 
 .box-style{
-    margin: 1em 0;
-    padding: 1.5em;
+    margin: 2em 0;
+    padding: 1rem 2.5rem;
 }
 
 .gradient-explore .learn-more {
@@ -172,7 +165,6 @@ background-color: var(--Secondary-Dodger-Blue);
 
 .break-line {
     color: var(--Secondary-letter-Nevada);
-    border-top: 1px solid;
     margin: 2em 0 2em 0;
     margin: 0 auto;
     width: 90%;
@@ -184,21 +176,15 @@ background-color: var(--Secondary-Dodger-Blue);
     width: 100%;
 }
 
-#experiences .title,
-#experiences .paragraph, 
-.info-box .title {
-    padding-bottom: .5em;
-}
-
 #discover {
     background: linear-gradient(to left, hsl(var(--Gradient-h), var(--Gradient-l), var(--Gradient-s), 48%), hsl(var(--Gradient-h), var(--Gradient-l), var(--Gradient-s), 60%));
     color: var(--Secondary-Titan-White);
+    font-size: 1.5rem;
 }
 
 .discover-title {
-    font-size: 2.5em;
+    font-size: 3rem;
     font-weight: 900;
-    padding-bottom: 1em;
 }
 
 .discover-btn {
@@ -206,8 +192,8 @@ background-color: var(--Secondary-Dodger-Blue);
     border: var(--Secondary-Transparent-White)2px solid;
     border-radius: 25px;
     cursor: pointer;
-    margin: 1em 0 1.5em 0;
-    padding: 1em 1.5em;
+    margin: 2.5em 0 2em 0;
+    padding: 1rem 1.5rem;
 }
 
 .discover-btn .fa-arrow-right {
@@ -258,7 +244,7 @@ background-color: var(--Secondary-Dodger-Blue);
     border: none;
     border-bottom: var(--Secondary-letter-Nevada) 2px solid;
     margin-bottom: 2em;
-    padding-top: 1em;
+    padding: .3rem;
 }
 
 #submit {
@@ -270,7 +256,7 @@ background-color: var(--Secondary-Dodger-Blue);
     font-family: 'Barlow Semi Condensed', sans-serif;
     font-weight: 600;
     margin-bottom: 2em;
-    padding: .5em 1em;
+    padding: .5rem 1rem;
     text-transform: uppercase;
 }
 
@@ -297,12 +283,12 @@ background-color: var(--Secondary-Dodger-Blue);
     }
 
     .nav-link {
-        font-size: .9em;
+        font-size: 1rem;
     }
 
     .box-style{
         margin: 1em 0;
-        padding: 1em;
+        padding: .5rem 1.2rem;
     }
 
     #main {
@@ -311,12 +297,17 @@ background-color: var(--Secondary-Dodger-Blue);
 }
 
 @media (min-width: 750px) {
-    #video {
-        min-height: 60vw;
+    .nav-link {
+        font-size: 1.5rem;
+        letter-spacing: .15em;
     }
 
-    .nav-link {
-        letter-spacing: .15em;
+    #header-img {
+        height: 8rem;
+    }
+
+    .fa-shopping-basket {
+        font-size: 2rem;
     }
 
     #main {
@@ -349,6 +340,30 @@ background-color: var(--Secondary-Dodger-Blue);
     .container {
         width: 90%;
     }
+    .two-cols {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2rem 0 0 0;
+    }
+
+    .video-cont {
+        width: 70%;
+        margin: 0;
+    }
+
+    .layout {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;        
+        width: 20%;
+        margin: 0;
+        font-size: 1.2em;
+    }
+
+    #video {
+        margin: 0;
+    }
 
     #discover {
         margin-bottom: 2em;
@@ -360,9 +375,11 @@ background-color: var(--Secondary-Dodger-Blue);
     }
 
     .background-img-quest2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
         width: 50%;
         margin: 0;
-        padding-top: 5em;
     }
 
     .container-boxes {
